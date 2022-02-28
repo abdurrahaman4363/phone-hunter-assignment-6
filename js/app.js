@@ -24,21 +24,19 @@
          const div = document.createElement('div');
          div.classList.add('phone-div');
          div.innerHTML = `
-           <div class="row row-cols-1 col-lg-4 g-4">
-            <div class="col">
-              <div class="card">
+           
+           <div class="row row-cols-1 col-12 col-lg-4 w-100 mx-auto">
+            <div class="col  m-5">
+              <div class="card ">
                 <img src="${phone.image}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${phone.phone_name}</h5>
                   <p class="card-text">${phone.brand}</p>
-                  
+                  <button class="">phone datails</button>
                 </div>
               </div>
             </div>
           </div>
-          <button onclick="" id="" class="phone-div">phone datails</button>
-
-         
 
          `;
 
