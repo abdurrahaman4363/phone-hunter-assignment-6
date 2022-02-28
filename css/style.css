@@ -1,0 +1,12 @@
+#container{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+}
+
+.phone-div{
+    /* background-color: aqua; */
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
