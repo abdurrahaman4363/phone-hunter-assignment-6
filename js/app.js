@@ -92,6 +92,7 @@ const displayPhoneDetail = information =>{
   <img src="${information.image}" class="card-img-top" alt="...">
   <div class="card-body">
   <p>Name: ${information.name}</P>
+  <h4>Release Date: ${information?.releaseDate === undefined? errorMessage:information.releaseDate}</h4>
      <h3>Basic Information:</h3>
      
     <p>storage: ${information.mainFeatures?.storage}</P>
@@ -100,7 +101,7 @@ const displayPhoneDetail = information =>{
     <p>memory: ${information.mainFeatures?.memory}</P> 
      
     
-    <p>ReleaseDate: ${information?.releaseDate === undefined? errorMessage:information.releaseDate}</p>
+    
     
     <h3>Sensor:</h3>
     <p>${information.mainFeatures?.sensors === undefined? errorMessage:information.mainFeatures.sensors}</p>

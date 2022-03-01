@@ -1,5 +1,5 @@
 
-
+/* use medio query for making responsive website  */
 @media screen and (max-width: 688px) {
     #container{
         display: grid;
@@ -20,7 +20,7 @@
         grid-template-columns: repeat(3,1fr);
      }
 }
-
+/* error message  */
 #error-show{
     text-align: center;
     color: red;
