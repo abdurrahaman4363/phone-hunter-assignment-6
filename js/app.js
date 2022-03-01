@@ -87,7 +87,7 @@ const displayPhoneDetail = information =>{
   
   div.classList.add('card');
 
-
+   const errorMessage = "Not Found"
 
   div.innerHTML =`
   <img src="${information.image}" class="card-img-top" alt="...">
@@ -101,16 +101,16 @@ const displayPhoneDetail = information =>{
     <p>memory: ${information.mainFeatures?.memory}</P> 
      
     
-    <p>ReleaseDate: ${information?.releaseDate}</p>
+    <p>ReleaseDate: ${information?.releaseDate === undefined? errorMessage:information.releaseDate}</p>
     
     <h3>Sensor:</h3>
-    <p>${information.mainFeatures?.sensors}</p>
+    <p>${information.mainFeatures?.sensors === undefined? errorMessage:information.mainFeatures.sensors}</p>
      <h3>Others Information</h3>
-     <p>WLAN: ${information.others?.WLAN}</p>
-    <p>Bluetooth: ${information.others?.Bluetooth}</p>
-    <p>GPS: ${information.others?.GPS}</p>
-    <p>NFC: ${information.others?.NFC}</p>
-    <p>Radio: ${information.others?.Radio}</p>
+     <p>WLAN: ${information.others?.WLAN === undefined? errorMessage:information.others.WLAN}</p>
+    <p>Bluetooth: ${information.others?.Bluetooth === undefined? errorMessage:information.others.Bluetooth}</p>
+    <p>GPS: ${information.others?.GPS === undefined? errorMessage:information.others.GPS}</p>
+    <p>NFC: ${information.others?.NFC === undefined? errorMessage:information.others.NFC}</p>
+    <p>Radio: ${information.others?.Radio === undefined? errorMessage:information.others.Radio}</p>
    
   </div>
   `;
