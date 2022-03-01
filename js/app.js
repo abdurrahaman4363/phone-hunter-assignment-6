@@ -13,17 +13,19 @@
     
     // displaying data which is getting from API
 
-    const displayPhone = PhoneDetail =>{
+    const displayPhone = PhoneShow =>{
 
-        // console.log(PhoneDetail);
+        console.log(PhoneShow);
 
-
+        const PhoneDetail = PhoneShow.slice(0,20);
         const constainerDiv = document.getElementById('container');
         constainerDiv.textContent ="";
 
         PhoneDetail.forEach(phone => {
 
-         /* console.log(phone.image);
+        
+          
+         /*
          console.log(phone.phone_name);
          console.log(phone.brand); */
 
@@ -47,7 +49,7 @@
          `;//slice(0,20)
 
          constainerDiv.appendChild(div);
-
+        
 
         })
     }
@@ -67,16 +69,16 @@ const buttonDetails = (phoneInformation) =>{
 // display details
 
 const displayPhoneDetail = information =>{
-  console.log(information);
-  console.log(information.mainFeatures);
-  console.log(information.others);
+  // console.log(information);
+  // console.log(information.mainFeatures);
+  // console.log(information.others);
   // console.log(information.mainFeatures.sensors);
   // 
   // console.log(information.image);
-  /* console.log(information.releaseDate);
+  // console.log(information.releaseDate);
   console.log(information.mainFeatures);
   
-   */
+  
   
   
   const phoneInformation = document.getElementById('phone-information');
@@ -93,28 +95,26 @@ const displayPhoneDetail = information =>{
   <p>Name: ${information.name}</P>
      <h3>Basic Information:</h3>
      
-    <p>storage: ${information.mainFeatures.storage}</P>
-    <p>displaySize: ${information.mainFeatures.displaySize}</P>
-    <p>chipSet: ${information.mainFeatures.chipSet}</P> 
-    <p>memory: ${information.mainFeatures.memory}</P> 
+    <p>storage: ${information.mainFeatures?.storage}</P>
+    <p>displaySize: ${information.mainFeatures?.displaySize}</P>
+    <p>chipSet: ${information.mainFeatures?.chipSet}</P> 
+    <p>memory: ${information.mainFeatures?.memory}</P> 
      
-    <p class="card-text">${information.releaseDate}</p>
+    
+    <p>ReleaseDate: ${information?.releaseDate}</p>
+    
     <h3>Sensor:</h3>
-    <p>${information.mainFeatures.sensors}</p>
+    <p>${information.mainFeatures?.sensors}</p>
      <h3>Others Information</h3>
-     <p>WLAN: ${information.others.WLAN}</p>
-    <p>Bluetooth: ${information.others.Bluetooth}</p>
-    <p>GPS: ${information.others.GPS}</p>
-    <p>NFC: ${information.others.NFC}</p>
-    <p>Radio: ${information.others.Radio}</p>
+     <p>WLAN: ${information.others?.WLAN}</p>
+    <p>Bluetooth: ${information.others?.Bluetooth}</p>
+    <p>GPS: ${information.others?.GPS}</p>
+    <p>NFC: ${information.others?.NFC}</p>
+    <p>Radio: ${information.others?.Radio}</p>
    
   </div>
   `;
-
-  phoneInformation.appendChild(div);
-  
-  
-  
+  phoneInformation.appendChild(div); 
 }
 
  
