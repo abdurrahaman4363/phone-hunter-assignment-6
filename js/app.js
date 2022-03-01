@@ -14,25 +14,25 @@
     // displaying data which is getting from API
 
     const displayPhone = PhoneShow =>{
+      // console.log(PhoneShow.length);
 
-        console.log(PhoneShow);
-
+      if(PhoneShow.length <= 0){
+          const errorShow = document.getElementById('error-show');
+          errorShow.style.display = 'block';
+      }
+      else{
+        const errorShow = document.getElementById('error-show');
+        errorShow.style.display = 'none';
         const PhoneDetail = PhoneShow.slice(0,20);
-        const constainerDiv = document.getElementById('container');
-        constainerDiv.textContent ="";
-
+        const containerDiv = document.getElementById('container');
+        containerDiv.textContent ="";
         PhoneDetail.forEach(phone => {
-
-        
-          
          /*
          console.log(phone.phone_name);
          console.log(phone.brand); */
-
          const div = document.createElement('div');
          div.classList.add('phone-div');
          div.innerHTML = `
-           
            <div class="row w-100 mx-auto">
             <div class="col m-5">
               <div class="card ">
@@ -45,13 +45,16 @@
               </div>
             </div>
           </div>
-
          `;//slice(0,20)
-
-         constainerDiv.appendChild(div);
+containerDiv.appendChild(div);
         
 
         })
+       
+      }
+        
+
+        
     }
 
     // button information
@@ -76,11 +79,7 @@ const displayPhoneDetail = information =>{
   // 
   // console.log(information.image);
   // console.log(information.releaseDate);
-  console.log(information.mainFeatures);
-  
-  
-  
-  
+  // console.log(information.mainFeatures);
   const phoneInformation = document.getElementById('phone-information');
   phoneInformation.textContent = "";
   const div= document.createElement('div');
