@@ -25,8 +25,8 @@
          div.classList.add('phone-div');
          div.innerHTML = `
            
-           <div class="row row-cols-1 col-12 col-lg-4 w-100 mx-auto">
-            <div class="col  m-5">
+           <div class="row w-100 mx-auto">
+            <div class="col m-5">
               <div class="card ">
                 <img src="${phone.image}" class="card-img-top" alt="...">
                 <div class="card-body">
